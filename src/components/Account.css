@@ -1,0 +1,125 @@
+.account {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 2px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    transition: box-shadow .3s;
+    position: relative;
+    display: flex;
+}
+
+.account:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.account__delete-icon {
+    position: absolute;
+    top:5px;
+    right:5px;
+    color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.account:hover .account__delete-icon {
+    opacity: 1;
+}
+
+.account-description {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: 0 35px 0 15px;
+    align-items: center;
+}
+.account-description__col {
+    display: flex;
+    flex-direction: column;
+}
+.positive-amount {
+    color: #27c374;
+    font-weight: 300;
+    text-shadow: 0px 1px 0px #126214;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+.negative-amount {
+    color: #a80f14;
+    font-weight: 300;
+    text-shadow: 0px 1px 0px #511600;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+.account-description__category {
+    text-transform: uppercase;
+    color: #333;
+    font-size: 15px;
+    padding-bottom: 3px;
+}
+.account-description__date {
+    font-size: 12px;
+    color: #999;
+    font-style: italic;
+}
+
+
+.category__icon {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+.category__icon span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    box-shadow: 3px 3px 14px -5px rgba(0,0,0,0.63);
+    border-radius: 50%;
+}
+
+/*categories icons*/
+
+/*transport*/
+.category__icon .transport {
+    background: url("./Categories/img/transport.svg") #56c387 50% 50% no-repeat;
+    background-size: 65%;
+}
+/*food*/
+.category__icon .food {
+    background: url("./Categories/img/food.svg") #c32150 50% 50% no-repeat;
+    background-size: 62%;
+}
+/*clothes*/
+.category__icon .clothes {
+    background: url("./Categories/img/clothes.svg") #416ec3 50% 50% no-repeat;
+    background-size: 65%;
+}
+/*entertainment*/
+.category__icon .entertainment {
+    background: url("./Categories/img/entertainment.svg") #df8748 50% 50% no-repeat;
+    background-size: 65%;
+}
+/*bills*/
+.category__icon .bills {
+    background: url("./Categories/img/bills.svg") #3dc3c2 50% 50% no-repeat;
+    background-size: 65%;
+}
+/*other*/
+.category__icon .other {
+    background: url("./Categories/img/other.svg") #901ac3 50% 50% no-repeat;
+    background-size: 65%;
+}

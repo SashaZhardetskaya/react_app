@@ -1,0 +1,101 @@
+.editor {
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number-editor {
+    width: 100%;
+    height: 70px;
+    background: #60e2b8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 15px 0;
+}
+
+.number-editor input {
+    border: none;
+    padding: 0 10px;
+    background: transparent;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.number-editor input:focus {
+    outline: 0;
+}
+
+.number-editor__button {
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    background: transparent;
+    border: 3px solid #fff;
+    font-size: 30px;
+    font-weight: 500;
+    outline: none;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 3px 3px 14px -5px rgba(0,0,0,0.33);
+}
+.number-editor__button:hover {
+    transition: all 0.4s ease-in-out;
+    box-shadow: 3px 3px 14px -5px rgba(0,0,0,0.63);
+}
+.number-editor__button span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.editor__button {
+    /*align-self: flex-end;*/
+    margin: 20px auto;
+    width: 100px;
+    background-color: #62b595;
+    border-radius: 28px;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 8px 8px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow:0px 1px 0px #2f6627;
+    box-shadow: 3px 3px 14px -5px rgba(0,0,0,0.33);
+}
+.editor__button.error {
+    border: none;
+    background-color: rgba(110, 153, 134, 0.75);
+}
+
+.editor__button.error:hover {
+    background-color: rgba(131, 90, 96, 0.63);
+}
+
+.editor__button:hover {
+    background-color: #60e2b8;
+    box-shadow: 3px 3px 14px -5px rgba(0,0,0,0.63);
+}
+
+.editor__button:active {
+    position: relative;
+    top: 1px;
+}
+
+.editor__button:focus {
+    outline: 0;
+}

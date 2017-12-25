@@ -1,0 +1,53 @@
+.app {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.app__header {
+    font-family: 'Galada', cursive;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    color: black;
+    text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
+}
+
+.editor__container {
+    width: 100%;
+    max-width: 600px;
+    margin: 16px auto;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.filters__container {
+    width: 90%;
+    margin: auto;
+    border-top: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.charts__container {
+    display: flex;
+}
+
+.charts__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.charts__show-button {
+    color: #53c39f;
+    font-weight: 300;
+    text-shadow: 0px 1px 0px #2f6627;
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 15px 0;
+}

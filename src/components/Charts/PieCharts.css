@@ -1,0 +1,12 @@
+.pie-charts {
+    width: 200px;
+    height: 300px;
+}
+
+.charts__description {
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 17px;
+}

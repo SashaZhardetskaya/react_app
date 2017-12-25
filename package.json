@@ -1,0 +1,21 @@
+{
+  "name": "money_manager",
+  "version": "0.1.0",
+  "private": false,
+  "dependencies": {
+    "material-ui": "^0.20.0",
+    "react": "^16.1.1",
+    "react-d3-tooltip": "^1.4.14",
+    "react-dom": "^16.1.1",
+    "react-masonry-component": "^6.0.1",
+    "react-pathjs-chart": "^0.3.5",
+    "react-scripts": "1.0.17",
+    "react-svg-piechart": "^1.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
