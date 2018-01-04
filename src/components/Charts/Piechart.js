@@ -26,7 +26,7 @@ export default class Piechart extends Component {
                 accByCategory.amount += item.amount;
             } else {
                 acc.push({
-                    amount: item.amount,
+                    value: item.amount, //the name of thw column must be 'value' for plugin
                     category: item.category,
                     color: item.color
                 });
@@ -34,10 +34,8 @@ export default class Piechart extends Component {
             return acc;
         }, []);
 
-        const data = reducedAccountsArr.map((obj) => {
-            obj.value = obj.amount; //the name of thw column must be 'value' for plugin
-            return obj;
-        });
+
+        const data = reducedAccountsArr;
 
 
         const {expandedSector} = this.state;
