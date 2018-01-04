@@ -1,18 +1,24 @@
 {
   "name": "money_manager",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
+  "homepage": "http://SashaZhardetskaya.github.io/react_app",
   "dependencies": {
+    "gh-pages": "^1.1.0",
     "material-ui": "^0.20.0",
     "react": "^16.1.1",
     "react-d3-tooltip": "^1.4.14",
     "react-dom": "^16.1.1",
     "react-masonry-component": "^6.0.1",
     "react-pathjs-chart": "^0.3.5",
+    "react-redux": "^5.0.6",
     "react-scripts": "1.0.17",
-    "react-svg-piechart": "^1.4.0"
+    "react-svg-piechart": "^1.4.0",
+    "redux": "^3.7.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+import { addAccount } from '../actions';
 
 import './AccountEditor.css';
 import Categories from './Categories/Categories';
 
-export default class AccountEditor extends Component {
+class AccountEditor extends Component {
     constructor() {
         super();
 
@@ -18,7 +21,7 @@ export default class AccountEditor extends Component {
         this.decreaseAmount = this.decreaseAmount.bind(this);
         this.changeAmount = this.changeAmount.bind(this);
         this.handleAccountAdd = this.handleAccountAdd.bind(this);
-        this.resetState = this.resetState.bind(this);
+        // this.resetState = this.resetState.bind(this);
         this.handleCategoryChange = this.handleCategoryChange.bind(this);
     }
 
@@ -68,25 +71,24 @@ export default class AccountEditor extends Component {
         };
         const newAccount = {
             amount: this.state.amount,
-            date: Date.now(),
             category: this.state.category,
-            id: Date.now(),
             color: selectColor(this.state.category),
         };
 
         if (newAccount.amount !== 0 && newAccount.category !== '') {
-            this.props.onAccountAdd(newAccount);
-            this.resetState();
+            // this.props.onAccountAdd(newAccount);
+            // this.resetState();
+            this.props.addAccount(this.state);
         }
     }
 
-    resetState() {
-        this.setState({
-            amount: 0,
-            date: '',
-            category: ''
-        });
-    }
+    // resetState() {
+    //     this.setState({
+    //         amount: 0,
+    //         date: '',
+    //         category: ''
+    //     });
+    // }
 
     render() {
         return (
@@ -104,3 +106,6 @@ export default class AccountEditor extends Component {
         );
     }
 }
+
+
+export default connect(null, { addAccount })(AccountEditor);

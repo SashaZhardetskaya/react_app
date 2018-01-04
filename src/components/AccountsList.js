@@ -1,27 +1,31 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import Account from './Account';
 
 import './AccountGrid.css';
 
 
-export default class AccountsList extends Component {
+class AccountsList extends Component {
+
+
     render() {
-        const {
-            accounts,
-            onAccountDelete
-        } = this.props;
+        // const {
+        //     // accounts,
+        //     onAccountDelete
+        // } = this.props;
 
         return (
             <div
                 className='grid'
             >
                 {
-                    accounts.map(account =>
+
+                    this.props.accounts.map(account =>
                         <Account
                             key={account.date}
                             id={account.date}
-                            onDelete={onAccountDelete}
+                            // onDelete={onAccountDelete}
                             amount={account.amount}
                             category={account.category}
                             date={account.date}
@@ -33,3 +37,18 @@ export default class AccountsList extends Component {
         );
     }
 }
+
+
+// export default connect(
+//     store => ({
+//         accounts: store.accounts
+//     }),
+// )(AccountsList);
+
+
+export default connect(
+    store => {
+        console.log(store);
+        return {accounts: store.accounts};
+    }
+)(AccountsList);

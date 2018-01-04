@@ -15,12 +15,12 @@ export default class App extends Component {
         super(props);
 
         this.state = {
-             accounts: [],
-             chartsIsOpen: false
+            accounts: [],
+            chartsIsOpen: false
         };
 
         this.handleAccountDelete = this.handleAccountDelete.bind(this);
-        this.handleAccountAdd = this.handleAccountAdd.bind(this);
+        // this.handleAccountAdd = this.handleAccountAdd.bind(this);
         this.applyFilters = this.applyFilters.bind(this);
     }
 
@@ -50,16 +50,16 @@ export default class App extends Component {
         console.log(this.state.accounts)
     }
 
-    handleAccountAdd(newAccount) {
-        this.setState({
-            accounts: [newAccount, ...this.state.accounts],
-        });
-        if (this.state.accountsToShow) {
-            this.setState({
-                accountsToShow: [newAccount, ...this.state.accountsToShow],
-            });
-        }
-    }
+    // handleAccountAdd(newAccount) {
+    //     this.setState({
+    //         accounts: [newAccount, ...this.state.accounts],
+    //     });
+    //     if (this.state.accountsToShow) {
+    //         this.setState({
+    //             accountsToShow: [newAccount, ...this.state.accountsToShow],
+    //         });
+    //     }
+    // }
 
 
     applyFilters(accounts, sorting, filterByAmount) {
@@ -84,9 +84,9 @@ export default class App extends Component {
 
     sortAccountsHandler = (selectedSortName, selectedSortStatus) => {
         if (this.state.accountsToShow) {
-        this.setState({
-            accountsToShow: this.applyFilters(this.state.accountsToShow, {name: selectedSortName, status: selectedSortStatus}, null)
-        });
+            this.setState({
+                accountsToShow: this.applyFilters(this.state.accountsToShow, {name: selectedSortName, status: selectedSortStatus}, null)
+            });
         } else {
             this.setState({
                 accountsToShow: this.applyFilters(this.state.accounts, {name: selectedSortName, status: selectedSortStatus}, null)
@@ -109,7 +109,9 @@ export default class App extends Component {
 
                 <div className="editor__container">
 
-                    <AccountEditor onAccountAdd={this.handleAccountAdd} />
+                    <AccountEditor
+                        // onAccountAdd={this.handleAccountAdd}
+                    />
 
                     <div className="filters__container">
 
@@ -137,7 +139,6 @@ export default class App extends Component {
                 </div>
 
                 <AccountsList
-                    accounts={this.state.accountsToShow ? this.state.accountsToShow : this.state.accounts}
                     onAccountDelete={this.handleAccountDelete}
                 />
             </div>
