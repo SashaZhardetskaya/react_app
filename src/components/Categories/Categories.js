@@ -18,10 +18,7 @@ export default class Categories extends Component {
                 selectedCategory: e.target.value === this.state.selectedCategory ? '' : e.target.value
             },
             () => {
-                let selected = {
-                    option: this.state.selectedCategory
-                };
-                this.props.onAddCategories(selected.option);
+                this.props.onAddCategories(this.state.selectedCategory);
             }
         );
     }
